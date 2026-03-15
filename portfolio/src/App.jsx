@@ -1,26 +1,25 @@
 import React from "react";
-//import ContactForm from "./components/ContactForm";
-//import CrudApi from "./components/CrudApi";
-//import CrudApp from "./components/CrudApp";
 import Modals from "./components/Modals";
-//import SelectsAnidados from "./components/SelectsAnidados";
-//import SongSearch from "./components/SongSearch";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+
 
 function App() {
   return (
-    <>      
-      
-      <Modals />
-      
-      {/* <ContactForm />
-      <hr />
-      <SelectsAnidados />
-      <hr />
-      <SongSearch />
-      <hr />
-      <CrudApi />
-      <hr /> 
-      <CrudApp /> */} 
+    <> 
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/servicios" element={<Services />}/>
+      <Route path="/acerca" element={<About />}/>
+      <Route path="/contacto" element={<Contact />}/>
+    </Routes>
+      <Modals />      
+    </BrowserRouter>      
+       
     </>
   );
 }

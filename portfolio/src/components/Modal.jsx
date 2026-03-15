@@ -1,4 +1,5 @@
 import React from "react";
+import { useDeviceInfo } from "../hooks/useDeviceInfo";
 import "./Modal.css";
 
 const Modal = ({ children, isOpen, closeModal }) => {

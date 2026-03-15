@@ -1,0 +1,153 @@
+/* src/services.css */
+
+.services-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.services-page h1,
+.services-page h2,
+.services-page h3,
+.services-page h4 {
+  color: #0f172a;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.services-page p {
+  margin: 0.5rem 0;
+}
+
+.services-page ul {
+  margin: 0.5rem 0 0.75rem 1.2rem;
+  padding: 0;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.service-card .meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.service-card .badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  margin-left: 0.4rem;
+}
+
+.service-card .tags {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.service-card .tags span {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: #f3f4f6;
+}
+
+@media (max-width: 640px) {
+  .services-page {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+}
+
+/* *********************************** Estilos imagenes**************************************** */
+
+/* src/services.css */
+
+/* Layout del contenido de servicios (ya lo estás usando) */
+.services-page {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* Cards del case study */
+.service-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid var(--color-contrast);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem 1.75rem;
+}
+
+/* Meta y badges */
+.service-card .meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.service-card .badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  margin-left: 0.4rem;
+}
+
+/* ----- Solo para las capturas ----- */
+
+.services-page .screens {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.services-page .screens figure {
+  margin: 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-contrast);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.services-page .screens img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+img:not(.logo img) {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: scroll-image;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.services-page .screens figcaption {
+  padding: 0.5rem 0.75rem 0.75rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* En pantallas grandes, dos columnas */
+@media screen and (min-width: 48em) {
+  .services-page .screens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+

@@ -13,9 +13,8 @@ const Modals = () => {
   const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false); */
 
   return (
-    <div>
-      
-      <Modal  isOpen={isOpenContact} closeModal={closeModalContact}>
+    <div>             
+      <Modal  isOpen={isOpenContact} closeModal={closeModalContact}>        
         <ContactForm />
       </Modal>      
     </div>

@@ -492,6 +492,26 @@ h6, small {
   font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
+/* Estilos base */
+#modal h2 {
+  color: #333; /* Negro/gris para light mode */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  #modal h2 {
+    color: #fff; /* Blanco para dark mode */
+  }
+  #modal form input, #modal form textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  #modal form input::placeholder, #modal form textarea::placeholder {
+    color: #aaa;
+  }
+}
+
 .hero-image {
   --bg-hero: url("../public/home.jpg");
   position: relative;
